@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="rikash.css">
+    <title>SKSSF PADIL</title>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="">
+           
+        <h1>SKSSF PADIL ></h1>
+       
+            <div class="input-box">
+                <input type="text" placeholder="Event name"required>
+        </div>
+        <div class="head">
+            <h2>Judges scores:</h2>
+        </div>
+        <div class="input-box">
+            <input type="number"  placeholder="Code Number 1"  min="0" max="10" required>
+     </div>
+     <div class="input-box">
+        <input type="number"  placeholder="Code Number 2" min="0" max="10" required>
+ </div>
+ <div class="input-box">
+    <input type="number" placeholder="Code Number 3" min="0" max="10"required>
+</div>
+<div>
+    <button type="submit"class="btn">Submit</button>
+</div>
+</form>
+    </div>
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            // Get the values from the input fields
+            const eventName = document.querySelector('input[placeholder="Event name"]').value;
+            const score1 = document.querySelector('input[placeholder="Code Number 1"]').value;
+            const score2 = document.querySelector('input[placeholder="Code Number 2"]').value;
+            const score3 = document.querySelector('input[placeholder="Code Number 3"]').value;
+    
+            // Display the values in an alert (you can modify this to handle the data as needed)
+            alert(`Event Name: ${eventName}\nScore 1: ${score1}\nScore 2: ${score2}\nScore 3: ${score3}`);
+    
+            // Here you can add code to send the data to a server if needed
+            // Example: use fetch to send a POST request
+    
+            // Reset the form after submission
+            this.reset();
+        });
+    </script>
+    
+</body>
+</html>
